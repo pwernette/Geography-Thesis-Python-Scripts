@@ -67,35 +67,32 @@ def clean_up():
     if arcpy.Exists(temproute):
         arcpy.Delete_management(temproute)
 
-path = 'C:/Users/Phil/Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
-outlog_path = 'C:/Users/Phil/Documents/Geography MS/analysis/' # Output log file location
+        
+        
+''' MODIFY THE FOLLOWING LINES FOR YOUR SPECIFIC PROJECT '''
+path = 'C:/.../Default.gdb/' # Geodatabase pathname
+outlog_path = 'C:/.../analysis/' # Output log file location
 
+# naming conventions for output products
 shorelinebuffer = path + 'shorelinebuffer'
 tempvert = path + 'tempshorelineverticies'
 temproute = path + 'temptransectroute'
 temptable = path + 'temptable'
 
-# List of professional shoreline delineations to analyze
+# List of professional shoreline delineations to analyze (examples provided)
 professionals = ['acmoody','goodwin','lusch']
 
-# List of the four location to be assessed
+
+# LOCATION INFORMATION:
+# List of the four locations/counties with shoreline vectors (examples provided)
 locations = ['alcona','allegan','manistee','sanilac']
 
-# Corresponding list of years to be analyzed for each site
-start_year = 1938
-end_year = 2010
-year_increment = 1
-years = range(start_year,end_year + 1,year_increment)
-#alcona_years = [1938,1952,1963,1979,1992,1998,2005,2009,2010]
-#allegan_years = [1938,1950,1960,1967,1974,1998,2005,2009,2010]
-#manistee_years = [1938,1952,1965,1973,1992,1998,2005,2009,2010]
-#sanilac_years = [1941,1955,1963,1982,1998,2005,2009,2010]
-
-alcona_skip = True
-allegan_skip = True
-manistee_skip = True
-sanilac_skip = True
-profes_skip = False
+# options to skip a particular location/site
+alcona_skip = False
+allegan_skip = False
+manistee_skip = False
+sanilac_skip = False
+profes_skip = True
 
 # Defines the beginning end of the transects
 alcona_dir = "UPPER_LEFT"
@@ -104,8 +101,17 @@ manistee_dir = "UPPER_RIGHT"
 sanilac_dir = "UPPER_LEFT"
 profes_dir = "UPPER_LEFT"
 
+# Corresponding list of years to be analyzed for each site
+start_year = 1938
+end_year = 2010
+year_increment = 1
+years = range(start_year,end_year + 1,year_increment)
+
+
+# log start time
 start_time = time.time() 
 
+# MAIN LOOP:
 for location in locations:
     '''
     ######################## ALCONA COUNTY ########################
