@@ -13,7 +13,7 @@ import arcpy
 from arcpy import env
 env.overwriteOutput = T 
 
-path = 'C:/Users/Phil/Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
+path = 'C:/Users/.../Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
 
 # List of the four location to be assessed
 locations = ['alcona','allegan','manistee','sanilac']
@@ -24,6 +24,8 @@ end_year = 2010
 year_increment = 1
 years = range(start_year,end_year + 1,year_increment)
 
+
+# MAIN LOOP:
 for l in locations:
     for y in years:
         fc = path + str(l) + '_shoreline_' + str(y)
