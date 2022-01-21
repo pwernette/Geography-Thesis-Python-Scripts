@@ -70,8 +70,8 @@ def clean_up():
         
         
 ''' MODIFY THE FOLLOWING LINES FOR YOUR SPECIFIC PROJECT '''
-path = 'C:/.../Default.gdb/' # Geodatabase pathname
-outlog_path = 'C:/.../analysis/' # Output log file location
+path = 'C:/users.../Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
+outlog_path = 'C:/users/.../Documents/analysis/' # Output log file location
 
 # naming conventions for output products
 shorelinebuffer = path + 'shorelinebuffer'
