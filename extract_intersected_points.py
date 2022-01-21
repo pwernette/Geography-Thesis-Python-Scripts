@@ -1,16 +1,16 @@
 '''
 Created on May 11, 2012
 
-@author: Phil
+@author: Phil Wernette
 '''
 
 import arcpy
 from arcpy import env
 env.overwriteOutput = True
 
-path = 'C:/Users/Phil/Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
-outpath = 'C:/Users/Phil/Documents/ArcGIS/Identity_data.gdb/' # Output geodatabase
-outlog_path = 'C:/Users/Phil/Documents/Geography MS/analysis/' # Output log file location
+path = 'C:/Users/.../Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
+outpath = 'C:/Users/.../Documents/ArcGIS/Identity_data.gdb/' # Output geodatabase
+outlog_path = 'C:/Users/.../Documents/analysis/' # Output log file location
 
 # List of the four location to be assessed
 locations = ['alcona','allegan','manistee','sanilac']
@@ -28,6 +28,8 @@ sanilac_skip = False
 # Generates array with all possible years
 years = range(start_year,end_year + 1,increment)
 
+
+# MAIN LOOP:
 for location in locations:
     # Create new output text file to log results in
     f = open(outlog_path + 'INTERSECT_POINTS_' + str(location) + '.txt','w')
