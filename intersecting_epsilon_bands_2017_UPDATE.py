@@ -75,7 +75,7 @@ def clean_up(items):
 
 # Paths where data is stored and saved throughout processing
 path = 'D:/Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
-outlog_path = 'D:/Dropbox/Geography MS/analysis/' # Output log file location
+outlog_path = 'D:/.../analysis/' # Output log file location
 overlap_gdb = 'D:/Documents/ArcGIS/Epsilon_analysis_OVERLAP.gdb/' # Geodatabase with overlapping segments
 # diff_gdb = 'C:/Users/Phil/Documents/ArcGIS/Epsilon_analysis_NONoverlap.gdb/'
 
