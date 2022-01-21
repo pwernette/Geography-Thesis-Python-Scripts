@@ -21,8 +21,8 @@ from arcpy import env
 env.overwriteOutput = T
 
 # Paths where data is stored and saved throughout processing
-path = 'C:/Users/Phil/Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
-gdb = 'C:/Users/Phil/Documents/ArcGIS/Epsilon_analysis_NONoverlap.gdb/'
+path = 'C:/Users/.../Documents/ArcGIS/Default.gdb/' # Geodatabase pathname
+gdb = 'C:/Users/.../Documents/ArcGIS/Epsilon_analysis_NONoverlap.gdb/'
 
 # List of the four location to be assessed
 locations = ['alcona','allegan','manistee','sanilac']
@@ -39,6 +39,8 @@ clean_list = []
 
 start_time = time.time() #Start the timer for the overall processing
 
+
+# MAIN LOOP:
 for l in locations:
     # Generate empty array that will be populated with feature classes later in the script
     list = []
